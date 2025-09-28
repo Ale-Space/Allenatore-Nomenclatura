@@ -1,0 +1,53 @@
+name: Build executables
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install pyinstaller
+
+      - name: Build Windows exe
+        run: pyinstaller --onefile main.py
+
+      - name: Upload exe
+        uses: actions/upload-artifact@v3
+        with:
+          name: windows-exe
+          path: dist/main.exe
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install pyinstaller
+
+      - name: Build Mac binary
+        run: pyinstaller --onefile main.py
+
+      - name: Upload Mac app
+        uses: actions/upload-artifact@v3
+        with:
+          name: macos-app
+          path: dist/main
