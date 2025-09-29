@@ -119,7 +119,7 @@ Ossiacidi = {
     "H2SeO3": {"formula": "H₂SeO₃", "iupac": "Acido triossoselenico (IV)", "tradizionale": "Acido selenioso"},
     "H2TeO4": {"formula": "H₂TeO₄", "iupac": "Acido tetraossotellurico (VI)", "tradizionale": "Acido tellurico"},
     "H2CO3": {"formula": "H₂CO₃", "iupac": "Acido triossocarbonico (IV)", "tradizionale": "Acido carbonico"},
-    "HNO2": {"formula": "HNO₂", "iupac": "Acido dioxonitrico (III)", "tradizionale": "Acido nitroso"},
+    "HNO2": {"formula": "HNO₂", "iupac": "Acido diossonitrico (III)", "tradizionale": "Acido nitroso"},
 
     "H3BO3": {"formula": "H₃BO₃", "iupac": "Acido triossoborico (III)", "tradizionale": "Acido ortoborico"},  
     "H3BO3": {"formula": "HBO₂", "iupac": "Acido diossoborico (III)", "tradizionale": "Acido metaborico"},  
@@ -217,15 +217,15 @@ Sali_binari = {
     "LiF": {"formula": "LiF", "iupac": "Fluoruro di litio", "tradizionale": "Fluoruro di litio"},
     "CaCl2": {"formula": "CaCl₂", "iupac": "Dicloruro di calcio", "tradizionale": "Cloruro di calcio"},
     "CaBr2": {"formula": "CaBr₂", "iupac": "Dibromuro di calcio", "tradizionale": "Bromuro di calcio"},
-    "CaI2": {"formula": "CaI₂", "iupac": "Dioduro di calcio", "tradizionale": "Ioduro di calcio"},
+    "CaI2": {"formula": "CaI₂", "iupac": "Diioduro di calcio", "tradizionale": "Ioduro di calcio"},
     "CaF2": {"formula": "CaF₂", "iupac": "Difluoruro di calcio", "tradizionale": "Fluoruro di calcio"},
     "MgCl2": {"formula": "MgCl₂", "iupac": "Dicloruro di magnesio", "tradizionale": "Cloruro di magnesio"},
     "MgBr2": {"formula": "MgBr₂", "iupac": "Dibromuro di magnesio", "tradizionale": "Bromuro di magnesio"},
-    "MgI2": {"formula": "MgI₂", "iupac": "Dioduro di magnesio", "tradizionale": "Ioduro di magnesio"},
+    "MgI2": {"formula": "MgI₂", "iupac": "Diioduro di magnesio", "tradizionale": "Ioduro di magnesio"},
     "MgF2": {"formula": "MgF₂", "iupac": "Difluoruro di magnesio", "tradizionale": "Fluoruro di magnesio"},
     "BaCl2": {"formula": "BaCl₂", "iupac": "Dicloruro di bario", "tradizionale": "Cloruro di bario"},
     "BaBr2": {"formula": "BaBr₂", "iupac": "Dibromuro di bario", "tradizionale": "Bromuro di bario"},
-    "BaI2": {"formula": "BaI₂", "iupac": "Dioduro di bario", "tradizionale": "Ioduro di bario"},
+    "BaI2": {"formula": "BaI₂", "iupac": "Diioduro di bario", "tradizionale": "Ioduro di bario"},
     "BaF2": {"formula": "BaF₂", "iupac": "Difluoruro di bario", "tradizionale": "Fluoruro di bario"},
     "FeCl2": {"formula": "FeCl₂", "iupac": "Dicloruro di ferro", "tradizionale": "Cloruro ferroso"},
     "FeCl3": {"formula": "FeCl₃", "iupac": "Tricloruro di ferro", "tradizionale": "Cloruro ferrico"},
@@ -241,7 +241,7 @@ Sali_binari = {
     "AgBr": {"formula": "AgBr", "iupac": "Bromuro di argento", "tradizionale": "Bromuro d’argento"},
     "AgI": {"formula": "AgI", "iupac": "Ioduro di argento", "tradizionale": "Ioduro d’argento"},
     "PbCl2": {"formula": "PbCl₂", "iupac": "Dicloruro di piombo", "tradizionale": "Cloruro piomboso"},
-    "PbI2": {"formula": "PbI₂", "iupac": "Dioduro di piombo", "tradizionale": "Ioduro piomboso"}
+    "PbI2": {"formula": "PbI₂", "iupac": "Diioduro di piombo", "tradizionale": "Ioduro piomboso"}
 }
 Sali_Ternari = {
     # Carbonati
