@@ -644,7 +644,7 @@ class NomenclaturaApp(tk.Tk):
 
             "Ossidi acidi": """Composti binari formati da non metallo (NM) + O.
 
-• Nomenclatura IUPAC: prefisso-ossido + d i + prefisso-NM
+• Nomenclatura IUPAC: prefisso-ossido + di + prefisso-NM
 
   prefissi: mon-, di-, tri-, tetra-, penta-, esa-, epta-
   Il prefisso mon- si mette solo davanti al termine «ossido».
@@ -686,10 +686,10 @@ class NomenclaturaApp(tk.Tk):
 • Fosforo, boro, arsenico e silicio: i loro ossidi acidi possono combinarsi con più di una molecola
   d'acqua al fine di formare un ossiacido, e ciò fa cambiare (solo) la nomenclatura tradizionale:
 
-• Se N.O. è pari: sono state aggiunte 1 o 2 molecole di H₂O, e si utilizzano i prefissi meta- e orto-,
+• Se N.O. è pari: sono state aggiunte 1 o 2 molecole di H₂O₂ e si utilizzano i prefissi meta- e orto-,
   rispettivamente.
 
-• Se N.O. è dispari: sono state aggiunte 1, 2 o 3 molecole di H₂0, e si utilizzano i prefissi meta-,
+• Se N.O. è dispari: sono state aggiunte 1, 2 o 3 molecole di H₂0₂ e si utilizzano i prefissi meta-,
   piro- e orto-, rispettivamente.""",
 
 #--------------------------------#
@@ -748,7 +748,7 @@ class NomenclaturaApp(tk.Tk):
 
             "Sali ternari": """Composti ternari ottenuti per parziale o totale sostituzione degli atomi di idrogeno di un ossiacido.
 
-• Nomenclatura IUPAC: (prefisso)-prefisso-osso-NM-ato + (N.O.) + d i + M + (N.O.)
+• Nomenclatura IUPAC: (prefisso)-prefisso-osso-NM-ato + (N.O.) + di + M + (N.O.)
 
   Prefissi: mono-, di-, tri-, tetra-
   Se M (o NM) ha un solo N.O., non si esplicita il N.O.
