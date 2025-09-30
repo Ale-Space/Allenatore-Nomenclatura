@@ -128,7 +128,7 @@ Ossiacidi = {
     "H4SiO4": {"formula": "H₄SiO₄", "iupac": "Acido tetraossosilicico (IV)", "tradizionale": "Acido ortosilicico"}, 
     "H2SiO3": {"formula": "H₂SiO₃", "iupac": "Acido triossilicico (IV)", "tradizionale": "Acido metasilicico"}, 
 
-    "H3AsO4": {"formula": "H₃AsO₄", "iupac": "Acido triossoarsenico (V)", "tradizionale": "Acido ortoarsenico"},  
+    "H3AsO4": {"formula": "H₃AsO₄", "iupac": "Acido tetraossoarsenico (V)", "tradizionale": "Acido ortoarsenico"},  
     "HAsO2": {"formula": "HAsO₂", "iupac": "Acido diossarsenioso (III)", "tradizionale": "Acido metaarsenioso"},    
     "H4As2O7": {"formula": "H₄As₂O₇", "iupac": "Acido eptaossoarsenico", "tradizionale": "Acido piroarsenico"}, 
 
