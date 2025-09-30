@@ -32,52 +32,52 @@ Ossidi_Basici = {
 
 }
 Ossidi_Acidi = {
-    "Cl2O7": {"formula": "Cl₂O₇", "iupac": "Eptaossido di dicloro", "tradizionale": "Anidrite perclorica"},
-    "As2O3": {"formula": "As₂O₃", "iupac": "Triossido di diarsenico", "tradizionale": "Anidrite arseniosa"},
-    "As2O5": {"formula": "As₂O₅", "iupac": "Pentaossido di diarsenico", "tradizionale": "Anidrite arsenica"},
+    "Cl2O7": {"formula": "Cl₂O₇", "iupac": "Eptaossido di dicloro", "tradizionale": "Anidride perclorica"},
+    "As2O3": {"formula": "As₂O₃", "iupac": "Triossido di diarsenico", "tradizionale": "Anidride arseniosa"},
+    "As2O5": {"formula": "As₂O₅", "iupac": "Pentaossido di diarsenico", "tradizionale": "Anidride arsenica"},
     "B2O3": {"formula": "B₂O₃", "iupac": "Triossido di diboro", "tradizionale": "Anidride borica"},
-    "CO2": {"formula": "CO₂", "iupac": "Diossido di carbonio", "tradizionale": "Anidrite carbonica"},
+    "CO2": {"formula": "CO₂", "iupac": "Diossido di carbonio", "tradizionale": "Anidride carbonica"},
     "I2O3": {"formula": "I₂O₃", "iupac": "Triossido di diiodo", "tradizionale": "Anidride iodosa"},
     "I2O5": {"formula": "I₂O₅", "iupac": "Pentaossido di diiodo", "tradizionale": "Anidride iodica"},
-    "P4O6": {"formula": "P₄O₆", "iupac": "Esaossido di tetrafosforo", "tradizionale": "Anidrite fosforosa"},
-    "P2O5": {"formula": "P₂O₅", "iupac": "Pentossido di difosforo", "tradizionale": "Anidrite perfosforica"},
-    "P4O10": {"formula": "P₄O₁₀", "iupac": "Decaossido di tetrsfosforo", "tradizionale": "Anidrite fosforica"},
+    "P4O6": {"formula": "P₄O₆", "iupac": "Esaossido di tetrafosforo", "tradizionale": "Anidride fosforosa"},
+    "P2O5": {"formula": "P₂O₅", "iupac": "Pentossido di difosforo", "tradizionale": "Anidride perfosforica"},
+    "P4O10": {"formula": "P₄O₁₀", "iupac": "Decaossido di tetrsfosforo", "tradizionale": "Anidride fosforica"},
     "SeO2": {"formula": "SeO₂", "iupac": "Diossido di selenio", "tradizionale": "Anidride selenosa"},
     "SeO3": {"formula": "SeO₃", "iupac": "Triossido di selenio", "tradizionale": "Anidride selenica"},
     "TeO2": {"formula": "TeO₂", "iupac": "Diossido di tellurio", "tradizionale": "Anidride tellurosa"},
     "TeO3": {"formula": "TeO₃", "iupac": "Triossido di tellurio", "tradizionale": "Anidride tellurica"},
-    "Cl2O": {"formula": "Cl₂O", "iupac": "Monossido di dicloro", "tradizionale": "Anidrite ipoclorosa"},
-    "Cl2O3": {"formula": "Cl₂O₃", "iupac": "Triossido di dicloro", "tradizionale": "Anidrite clorosa"},
-    "Cl2O5": {"formula": "Cl₂O₅", "iupac": "Pentossido di dicloro", "tradizionale": "Anidrite clorica"},
-    "Br2O": {"formula": "Br₂O", "iupac": "Monossido di dibromo", "tradizionale": "Anidrite ipobromosa"},
-    "BrO2": {"formula": "BrO₂", "iupac": "Diossido di bromo", "tradizionale": "Anidrite bromosa"},
-    "Br2O5": {"formula": "Br₂O₅", "iupac": "Pentossido di dibromo", "tradizionale": "Anidrite bromica"},
-    "BrO3": {"formula": "BrO₃", "iupac": "Triossido di bromo", "tradizionale": "Anidrite perbromica"},    
-    "I2O": {"formula": "I₂O", "iupac": "Monossido di diiodo", "tradizionale": "Anidrite ipoiodosa"},
-    "I2O7": {"formula": "I₂O₇", "iupac": "Eptaossido di diiodo", "tradizionale": "Anidrite periodica"},
-    "Sb2O3": {"formula": "Sb₂O₃", "iupac": "Triossido di distagno", "tradizionale": "Anidrite antimmoniosa"},
-    "Sb2O5": {"formula": "Sb₂O₅", "iupac": "Pentaossido di distagno", "tradizionale": "Anidrite antimmonica"}
+    "Cl2O": {"formula": "Cl₂O", "iupac": "Monossido di dicloro", "tradizionale": "Anidride ipoclorosa"},
+    "Cl2O3": {"formula": "Cl₂O₃", "iupac": "Triossido di dicloro", "tradizionale": "Anidride clorosa"},
+    "Cl2O5": {"formula": "Cl₂O₅", "iupac": "Pentossido di dicloro", "tradizionale": "Anidride clorica"},
+    "Br2O": {"formula": "Br₂O", "iupac": "Monossido di dibromo", "tradizionale": "Anidride ipobromosa"},
+    "BrO2": {"formula": "BrO₂", "iupac": "Diossido di bromo", "tradizionale": "Anidride bromosa"},
+    "Br2O5": {"formula": "Br₂O₅", "iupac": "Pentossido di dibromo", "tradizionale": "Anidride bromica"},
+    "BrO3": {"formula": "BrO₃", "iupac": "Triossido di bromo", "tradizionale": "Anidride perbromica"},    
+    "I2O": {"formula": "I₂O", "iupac": "Monossido di diiodo", "tradizionale": "Anidride ipoiodosa"},
+    "I2O7": {"formula": "I₂O₇", "iupac": "Eptaossido di diiodo", "tradizionale": "Anidride periodica"},
+    "Sb2O3": {"formula": "Sb₂O₃", "iupac": "Triossido di distagno", "tradizionale": "Anidride antimmoniosa"},
+    "Sb2O5": {"formula": "Sb₂O₅", "iupac": "Pentaossido di distagno", "tradizionale": "Anidride antimmonica"}
 
 }
 Eccezioni_Ossidi = {
     
     "CrO":   {"formula": "CrO",    "iupac": "Monossido di cromo", "tradizionale": "Ossido cromoso"},
     "Cr2O3": {"formula": "Cr₂O₃",  "iupac": "Triossido di dicromo", "tradizionale": "Ossido cromico"},
-    "CrO3":  {"formula": "CrO₃",   "iupac": "Triossido di cromo", "tradizionale": "Anidrite cromica"},
+    "CrO3":  {"formula": "CrO₃",   "iupac": "Triossido di cromo", "tradizionale": "Anidride cromica"},
   
     "MnO":   {"formula": "MnO",    "iupac": "Monossido di manganese", "tradizionale": "Ossido manganoso"},
     "Mn2O3": {"formula": "Mn₂O₃",  "iupac": "Triossido di dimanganese", "tradizionale": "Ossido manganico"},
     "MnO2":  {"formula": "MnO₂",   "iupac": "Diossido di manganese", "tradizionale": "Diossido di manganese"},
-    "Mn3O4": {"formula": "MnO₃",  "iupac": "Triossido di manganese", "tradizionale": "Anidrite manganica"},
-    "Mn2O7": {"formula": "Mn₂O₇",  "iupac": "Eptaossido di dimanganese", "tradizionale": "Anidrite permanganica"},
+    "Mn3O4": {"formula": "MnO₃",  "iupac": "Triossido di manganese", "tradizionale": "Anidride manganica"},
+    "Mn2O7": {"formula": "Mn₂O₇",  "iupac": "Eptaossido di dimanganese", "tradizionale": "Anidride permanganica"},
 
     "N2O":   {"formula": "N₂O",    "iupac": "Monossido di diazoto", "tradizionale": "Protossido di azoto"},
     "NO":    {"formula": "NO",     "iupac": "Monossido di azoto", "tradizionale": "Ossido di azoto"},
-    "N2O3":  {"formula": "N₂O₃",   "iupac": "Triossido di diazoto", "tradizionale": "Anidrite nitrosa"},
-    "NO2":   {"formula": "NO₂",    "iupac": "Diossido di azoto", "tradizionale": "Anidrite nitrosso-nitrica"},
-    "N2O5":  {"formula": "N₂O₅",   "iupac": "Pentossido di diazoto", "tradizionale": "Anidrite nitrica"},
+    "N2O3":  {"formula": "N₂O₃",   "iupac": "Triossido di diazoto", "tradizionale": "Anidride nitrosa"},
+    "NO2":   {"formula": "NO₂",    "iupac": "Diossido di azoto", "tradizionale": "Anidride nitrosso-nitrica"},
+    "N2O5":  {"formula": "N₂O₅",   "iupac": "Pentossido di diazoto", "tradizionale": "Anidride nitrica"},
     
-    "CO":    {"formula": "CO",     "iupac": "Monossido di carbonio", "tradizionale": "Anidrite Carboniosa"}
+    "CO":    {"formula": "CO",     "iupac": "Monossido di carbonio", "tradizionale": "Anidride Carboniosa"}
 }
 Idrossidi = {
     "Li(OH)": {"formula": "Li(OH)", "iupac": "Idrossido di litio", "tradizionale": "Idrossido di litio"},
