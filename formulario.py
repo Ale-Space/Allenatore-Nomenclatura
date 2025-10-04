@@ -37,8 +37,8 @@ Ossidi_Acidi = {
     "As2O5": {"formula": "As₂O₅", "iupac": "Pentaossido di diarsenico", "tradizionale": "Anidride arsenica"},
     "B2O3": {"formula": "B₂O₃", "iupac": "Triossido di diboro", "tradizionale": "Anidride borica"},
     "CO2": {"formula": "CO₂", "iupac": "Diossido di carbonio", "tradizionale": "Anidride carbonica"},
-    "I2O3": {"formula": "I₂O₃", "iupac": "Triossido di diiodo", "tradizionale": "Anidride iodosa"},
-    "I2O5": {"formula": "I₂O₅", "iupac": "Pentaossido di diiodo", "tradizionale": "Anidride iodica"},
+    "I2O3": {"formula": "I₂O₃", "iupac": "Triossido di diiodio", "tradizionale": "Anidride iodosa"},
+    "I2O5": {"formula": "I₂O₅", "iupac": "Pentaossido di diiodio", "tradizionale": "Anidride iodica"},
     "P4O6": {"formula": "P₄O₆", "iupac": "Esaossido di tetrafosforo", "tradizionale": "Anidride fosforosa"},
     "P2O5": {"formula": "P₂O₅", "iupac": "Pentossido di difosforo", "tradizionale": "Anidride perfosforica"},
     "P4O10": {"formula": "P₄O₁₀", "iupac": "Decaossido di tetrsfosforo", "tradizionale": "Anidride fosforica"},
@@ -53,8 +53,8 @@ Ossidi_Acidi = {
     "BrO2": {"formula": "BrO₂", "iupac": "Diossido di bromo", "tradizionale": "Anidride bromosa"},
     "Br2O5": {"formula": "Br₂O₅", "iupac": "Pentossido di dibromo", "tradizionale": "Anidride bromica"},
     "BrO3": {"formula": "BrO₃", "iupac": "Triossido di bromo", "tradizionale": "Anidride perbromica"},    
-    "I2O": {"formula": "I₂O", "iupac": "Monossido di diiodo", "tradizionale": "Anidride ipoiodosa"},
-    "I2O7": {"formula": "I₂O₇", "iupac": "Eptaossido di diiodo", "tradizionale": "Anidride periodica"},
+    "I2O": {"formula": "I₂O", "iupac": "Monossido di diiodio", "tradizionale": "Anidride ipoiodosa"},
+    "I2O7": {"formula": "I₂O₇", "iupac": "Eptaossido di diiodio", "tradizionale": "Anidride periodica"},
     "Sb2O3": {"formula": "Sb₂O₃", "iupac": "Triossido di distagno", "tradizionale": "Anidride antimmoniosa"},
     "Sb2O5": {"formula": "Sb₂O₅", "iupac": "Pentaossido di distagno", "tradizionale": "Anidride antimmonica"}
 
@@ -237,9 +237,9 @@ Sali_binari = {
     "Cu2S": {"formula": "Cu₂S", "iupac": "Solfuro di dirame", "tradizionale": "Solfuro rameoso"},
     "ZnCl2": {"formula": "ZnCl₂", "iupac": "Dicloruro di zinco", "tradizionale": "Cloruro di zinco"},
     "ZnS": {"formula": "ZnS", "iupac": "Solfuro di zinco", "tradizionale": "Solfuro di zinco"},
-    "AgCl": {"formula": "AgCl", "iupac": "Cloruro di argento", "tradizionale": "Cloruro d’argento"},
-    "AgBr": {"formula": "AgBr", "iupac": "Bromuro di argento", "tradizionale": "Bromuro d’argento"},
-    "AgI": {"formula": "AgI", "iupac": "Ioduro di argento", "tradizionale": "Ioduro d’argento"},
+    "AgCl": {"formula": "AgCl", "iupac": "Cloruro di argento", "tradizionale": "Cloruro di argento"},
+    "AgBr": {"formula": "AgBr", "iupac": "Bromuro di argento", "tradizionale": "Bromuro di argento"},
+    "AgI": {"formula": "AgI", "iupac": "Ioduro di argento", "tradizionale": "Ioduro di argento"},
     "PbCl2": {"formula": "PbCl₂", "iupac": "Dicloruro di piombo", "tradizionale": "Cloruro piomboso"},
     "PbI2": {"formula": "PbI₂", "iupac": "Diioduro di piombo", "tradizionale": "Ioduro piomboso"}
 }
@@ -248,8 +248,8 @@ Sali_Ternari = {
     "Na2CO3": {"formula": "Na₂CO₃", "iupac": "Triossocarbonato di disodio", "tradizionale": "Carbonato di sodio"},
     "K2CO3": {"formula": "K₂CO₃", "iupac": "Triossocarbonato di dipotassio", "tradizionale": "Carbonato di potassio"},
     "CaCO3": {"formula": "CaCO₃", "iupac": "Triossocarbonato di calcio", "tradizionale": "Carbonato di calcio"},
-    "NiCO3": {"formula": "NiCO₃", "iupac": "Triossocarbonato di nichel (II)", "tradizionale": "Carbonato nickeloso"},
-    "Ag2CO3": {"formula": "Ag₂CO₃", "iupac": "Triossocarbonato di diargento", "tradizionale": "Carbonato d’argento"},
+    "NiCO3": {"formula": "NiCO₃", "iupac": "Triossocarbonato di nichel (II)", "tradizionale": "Carbonato nicheloso"},
+    "Ag2CO3": {"formula": "Ag₂CO₃", "iupac": "Triossocarbonato di diargento", "tradizionale": "Carbonato di argento"},
     # Solfati
     "FeSO4": {"formula": "FeSO₄", "iupac": "Tetraossosolfato di ferro (II)", "tradizionale": "Solfato ferroso"},
     "CuSO4": {"formula": "CuSO₄", "iupac": "Tetraossosolfato di rame (II)", "tradizionale": "Solfato rameoso"},
@@ -261,7 +261,7 @@ Sali_Ternari = {
     "NaNO3": {"formula": "NaNO₃", "iupac": "Triossonitrato di sodio", "tradizionale": "Nitrato di sodio"},
     "Ca(NO3)2": {"formula": "Ca(NO₃)₂", "iupac": "Ditriossonitrato di calcio", "tradizionale": "Nitrato di calcio"},
     "Mg(NO3)2": {"formula": "Mg(NO₃)₂", "iupac": "Ditriossonitrato di magnesio", "tradizionale": "Nitrato di magnesio"},
-    "AgNO3": {"formula": "AgNO₃", "iupac": "Triossonitrato di argento", "tradizionale": "Nitrato d’argento"},
+    "AgNO3": {"formula": "AgNO₃", "iupac": "Triossonitrato di argento", "tradizionale": "Nitrato di argento"},
     "Ba(NO3)2": {"formula": "Ba(NO₃)₂", "iupac": "Ditriossonitrato di bario", "tradizionale": "Nitrato di bario"},
     "Sr(NO3)2": {"formula": "Sr(NO₃)₂", "iupac": "Ditriossonitrato di stronzio", "tradizionale": "Nitrato di stronzio"},
     # Fosfati
@@ -271,7 +271,7 @@ Sali_Ternari = {
     "Mg3(PO4)2": {"formula": "Mg₃(PO₄)₂", "iupac": "Ditetraossofosfato di trimagnesio", "tradizionale": "Fosfato di magnesio"},
     "Pb3(PO4)2": {"formula": "Pb₃(PO₄)₂", "iupac": "Ditetraossofosfato di tripiombo (II)", "tradizionale": "Fosfato piomboso"},
     "Sr3(PO4)2": {"formula": "Sr₃(PO₄)₂", "iupac": "Ditetraossofosfato di tristronzio", "tradizionale": "Fosfato di stronzio"},
-    "Ag3PO4": {"formula": "Ag₃PO₄", "iupac": "Tetraossofosfato di triargento", "tradizionale": "Fosfato d’argento"}
+    "Ag3PO4": {"formula": "Ag₃PO₄", "iupac": "Tetraossofosfato di triargento", "tradizionale": "Fosfato di argento"}
 }
 Sali_Ternari_Acidi = {# Bisolfati/Bisolfiti/Bicarbonati: "n-idrogeno" + nome anione + "di" + metallo
     "NaHSO4": {"formula": "NaHSO₄", "iupac": "Monoidrogenosolfato (VI) di sodio", "tradizionale": "Bisolfato di sodio"},
