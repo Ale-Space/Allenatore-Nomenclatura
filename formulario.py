@@ -14,8 +14,8 @@ Ossidi_Basici = {
     "RaO": {"formula": "RaO", "iupac": "Ossido di radio", "tradizionale": "Ossido di radio"},
     "Sc2O3": {"formula": "Sc₂O₃", "iupac": "Triossido di discandio", "tradizionale": "Ossido di scandio"},
     "In2O3": {"formula": "In₂O₃", "iupac": "Triossido di indio", "tradizionale": "Ossido di indio"},
-    "Tl2O": {"formula": "Tl₂O", "iupac": "Monossido di tallio", "tradizionale": "Ossido Talloso"},
-    "Tl2O3": {"formula": "Tl₂O₃", "iupac": "Triossido di ditallio", "tradizionale": "Ossido Tallico"},
+    "Tl2O": {"formula": "Tl₂O", "iupac": "Monossido di tallio", "tradizionale": "Ossido tallioso"},
+    "Tl2O3": {"formula": "Tl₂O₃", "iupac": "Triossido di ditallio", "tradizionale": "Ossido tallico"},
     "PbO": {"formula": "PbO", "iupac": "Monossido di piombo", "tradizionale": "Ossido piomboso"},
     "SnO": {"formula": "SnO", "iupac": "Monossido di stagno", "tradizionale": "Ossido stannoso"},
     "SnO2": {"formula": "SnO₂", "iupac": "Diossido di stagno", "tradizionale": "Ossido stannico"},
@@ -27,8 +27,8 @@ Ossidi_Basici = {
     "Pr2O3": {"formula": "Pr₂O₃", "iupac": "Triossido di dipraseodimio", "tradizionale": "Ossido Praseodimioso"},
     "Sm2O3": {"formula": "Sm₂O₃", "iupac": "Triossido di disamario", "tradizionale": "Ossido samarico"},
     "Eu2O3": {"formula": "Eu₂O₃", "iupac": "Triossido di dieuropio", "tradizionale": "Ossido europico"},
-    "Fe2O3": {"formula": "Fe₂O₃","iupac": "Triossido di diferro", "tradizionale":"Ossido Ferrico"},
-    "FeO": {"formula": "FeO","iupac": "Monossido di ferro", "tradizionale":"Ossido Ferroso"}
+    "Fe2O3": {"formula": "Fe₂O₃","iupac": "Triossido di diferro", "tradizionale":"Ossido ferrico"},
+    "FeO": {"formula": "FeO","iupac": "Monossido di ferro", "tradizionale":"Ossido ferroso"}
 
 }
 Ossidi_Acidi = {
@@ -41,7 +41,7 @@ Ossidi_Acidi = {
     "I2O5": {"formula": "I₂O₅", "iupac": "Pentaossido di diiodio", "tradizionale": "Anidride iodica"},
     "P4O6": {"formula": "P₄O₆", "iupac": "Esaossido di tetrafosforo", "tradizionale": "Anidride fosforosa"},
     "P2O5": {"formula": "P₂O₅", "iupac": "Pentossido di difosforo", "tradizionale": "Anidride perfosforica"},
-    "P4O10": {"formula": "P₄O₁₀", "iupac": "Decaossido di tetrsfosforo", "tradizionale": "Anidride fosforica"},
+    "P4O10": {"formula": "P₄O₁₀", "iupac": "Decaossido di tetrafosforo", "tradizionale": "Anidride fosforica"},
     "SeO2": {"formula": "SeO₂", "iupac": "Diossido di selenio", "tradizionale": "Anidride selenosa"},
     "SeO3": {"formula": "SeO₃", "iupac": "Triossido di selenio", "tradizionale": "Anidride selenica"},
     "TeO2": {"formula": "TeO₂", "iupac": "Diossido di tellurio", "tradizionale": "Anidride tellurosa"},
@@ -68,7 +68,7 @@ Eccezioni_Ossidi = {
     "MnO":   {"formula": "MnO",    "iupac": "Monossido di manganese", "tradizionale": "Ossido manganoso"},
     "Mn2O3": {"formula": "Mn₂O₃",  "iupac": "Triossido di dimanganese", "tradizionale": "Ossido manganico"},
     "MnO2":  {"formula": "MnO₂",   "iupac": "Diossido di manganese", "tradizionale": "Diossido di manganese"},
-    "Mn3O4": {"formula": "MnO₃",  "iupac": "Triossido di manganese", "tradizionale": "Anidride manganica"},
+  "Mn3O4": {"formula": "Mn₃O₄",  "iupac": "Tetraossido di trimanganese", "tradizionale": "Ossido manganoso-manganico"},
     "Mn2O7": {"formula": "Mn₂O₇",  "iupac": "Eptaossido di dimanganese", "tradizionale": "Anidride permanganica"},
 
     "N2O":   {"formula": "N₂O",    "iupac": "Monossido di diazoto", "tradizionale": "Protossido di azoto"},
@@ -111,9 +111,9 @@ Ossiacidi = {
     "HBrO3": {"formula": "HBrO₃", "iupac": "Acido triossobromico (V)", "tradizionale": "Acido bromico"},
     "HBrO4": {"formula": "HBrO₄", "iupac": "Acido tetraossobromico (VII)", "tradizionale": "Acido perbromico"},
     "HIO": {"formula": "HIO", "iupac": "Acido monossoiodico (I)", "tradizionale": "Acido ipoiodoso"},
-    "HIO2": {"formula": "HIO₂", "iupac": "Acido diossiodico (III)", "tradizionale": "Acido iodoso"},
-    "HIO3": {"formula": "HIO₃", "iupac": "Acido triossidico (V)", "tradizionale": "Acido iodico"},
-    "HIO4": {"formula": "HIO₄", "iupac": "Acido tetraossiodico (VII)", "tradizionale": "Acido periodico"},
+    "HIO2": {"formula": "HIO₂", "iupac": "Acido diossoiodico (III)", "tradizionale": "Acido iodoso"},
+    "HIO3": {"formula": "HIO₃", "iupac": "Acido triossoiodico (V)", "tradizionale": "Acido iodico"},
+    "HIO4": {"formula": "HIO₄", "iupac": "Acido tetraossoiodico (VII)", "tradizionale": "Acido periodico"},
     "H2SO3": {"formula": "H₂SO₃", "iupac": "Acido triossosolforico (IV)", "tradizionale": "Acido solforoso"},
     "H2SO4": {"formula": "H₂SO₄", "iupac": "Acido tetraossosolforico (VI)", "tradizionale": "Acido solforico"},
     "H2SeO3": {"formula": "H₂SeO₃", "iupac": "Acido triossoselenico (IV)", "tradizionale": "Acido selenioso"},
@@ -122,7 +122,7 @@ Ossiacidi = {
     "HNO2": {"formula": "HNO₂", "iupac": "Acido diossonitrico (III)", "tradizionale": "Acido nitroso"},
 
     "H3BO3": {"formula": "H₃BO₃", "iupac": "Acido triossoborico (III)", "tradizionale": "Acido ortoborico"},  
-    "H3BO3": {"formula": "HBO₂", "iupac": "Acido diossoborico (III)", "tradizionale": "Acido metaborico"},  
+    "HBO2": {"formula": "HBO₂", "iupac": "Acido diossoborico (III)", "tradizionale": "Acido metaborico"},  
     "H2B4O7": {"formula": "H₂B₄O₇", "iupac": "Acido eptaossotetraborico (III)", "tradizionale": "Acido piroborico"},
 
     "H4SiO4": {"formula": "H₄SiO₄", "iupac": "Acido tetraossosilicico (IV)", "tradizionale": "Acido ortosilicico"}, 
