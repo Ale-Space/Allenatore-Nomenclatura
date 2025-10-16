@@ -13,8 +13,8 @@ Ossidi_Basici = {
     "BaO": {"formula": "BaO", "iupac": "Ossido di bario", "tradizionale": "Ossido di bario"},
     "RaO": {"formula": "RaO", "iupac": "Ossido di radio", "tradizionale": "Ossido di radio"},
     "Sc2O3": {"formula": "Sc₂O₃", "iupac": "Triossido di discandio", "tradizionale": "Ossido di scandio"},
-    "In2O3": {"formula": "In₂O₃", "iupac": "Triossido di indio", "tradizionale": "Ossido di indio"},
-    "Tl2O": {"formula": "Tl₂O", "iupac": "Monossido di tallio", "tradizionale": "Ossido tallioso"},
+    "In2O3": {"formula": "In₂O₃", "iupac": "Triossido di diindio", "tradizionale": "Ossido di indio"},
+    "Tl2O": {"formula": "Tl₂O", "iupac": "Monossido di ditallio", "tradizionale": "Ossido tallioso"},
     "Tl2O3": {"formula": "Tl₂O₃", "iupac": "Triossido di ditallio", "tradizionale": "Ossido tallico"},
     "PbO": {"formula": "PbO", "iupac": "Monossido di piombo", "tradizionale": "Ossido piomboso"},
     "SnO": {"formula": "SnO", "iupac": "Monossido di stagno", "tradizionale": "Ossido stannoso"},
@@ -55,8 +55,8 @@ Ossidi_Acidi = {
     "BrO3": {"formula": "BrO₃", "iupac": "Triossido di bromo", "tradizionale": "Anidride perbromica"},    
     "I2O": {"formula": "I₂O", "iupac": "Monossido di diiodio", "tradizionale": "Anidride ipoiodosa"},
     "I2O7": {"formula": "I₂O₇", "iupac": "Eptaossido di diiodio", "tradizionale": "Anidride periodica"},
-    "Sb2O3": {"formula": "Sb₂O₃", "iupac": "Triossido di distagno", "tradizionale": "Anidride antimmoniosa"},
-    "Sb2O5": {"formula": "Sb₂O₅", "iupac": "Pentaossido di distagno", "tradizionale": "Anidride antimmonica"}
+    "Sb2O3": {"formula": "Sb₂O₃", "iupac": "Triossido di diantimonio", "tradizionale": "Anidride antimmoniosa"},
+    "Sb2O5": {"formula": "Sb₂O₅", "iupac": "Pentaossido di diantimonio", "tradizionale": "Anidride antimmonica"}
 
 }
 Eccezioni_Ossidi = {

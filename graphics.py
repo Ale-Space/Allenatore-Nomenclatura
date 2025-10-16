@@ -5,7 +5,7 @@ import random
 from formulario import categorie_formule
 import re
 
-
+    
 class NomenclaturaApp(tk.Tk):
 
     def __init__(self):
@@ -49,6 +49,8 @@ class NomenclaturaApp(tk.Tk):
         self.aggiorna_filtri()
         self.nuova_formula()
         self.apply_theme()
+        self.bind("<Tab>", self.nuova_formula)
+
 
     # ------------------ Creazione UI ------------------
     def _configure_styles(self):
@@ -156,7 +158,6 @@ class NomenclaturaApp(tk.Tk):
         gruppi_frame.configure(width=500)
         gruppi_frame.pack_propagate(False)
 
-
         order = [
             ("Ossidi Basici", 0, 0), ("Ossidi Acidi", 1, 0), ("Idrossidi", 2, 0),
             ("Ossiacidi", 0, 1), ("Perossidi", 1, 1), ("Idracidi", 2, 1),
@@ -169,6 +170,33 @@ class NomenclaturaApp(tk.Tk):
                                      style='Option.TCheckbutton', command=self.aggiorna_filtri)
                 cb.grid(row=r, column=c, sticky='w', padx=8, pady=4)
 
+        # --- Bottone Toggle "Seleziona Tutti"/"Deseleziona Tutti" in alto a destra ---
+        self._toggle_all_selected = tk.BooleanVar(value=True)
+        def toggle_all_groups():
+            new_state = not self._toggle_all_selected.get()
+            for var in self.gruppi_vars.values():
+                var.set(new_state)
+            self._toggle_all_selected.set(new_state)
+            # Cambia testo bottone
+            if new_state:
+                self.toggle_all_btn.config(text="Deseleziona Tutti")
+            else:
+                self.toggle_all_btn.config(text="Seleziona Tutti")
+            self.aggiorna_filtri()
+
+        # Bottone piccolo, in alto a destra, col testo dinamico
+        self.toggle_all_btn = ttk.Button(
+            gruppi_frame,
+            text="Deseleziona Tutti",
+            style="Dark.TButton",
+            command=toggle_all_groups,
+            width=15  # Più piccolo
+        )
+        # Metti il bottone in alto a destra (colonna 3, riga 0, sopra i checkbutton)
+        self.toggle_all_btn.grid(row=0, column=3, sticky="ne", padx=(8, 8), pady=(2, 2))
+
+        # Aggiorna larghezza colonne per fare spazio al bottone piccolo
+        gruppi_frame.grid_columnconfigure(3, minsize=80)
 
         side_frame_width = 130
         nom_frame = ttk.LabelFrame(top, text='Nomenclatura', style='Dark.TLabelframe')
@@ -206,7 +234,6 @@ class NomenclaturaApp(tk.Tk):
             )
             cb.pack(anchor='w', pady=2, padx=6)
 
-
         def sync_height(event=None):
             h1 = gruppi_frame.winfo_height()
             h2 = nom_frame.winfo_height()
@@ -223,6 +250,16 @@ class NomenclaturaApp(tk.Tk):
         nom_frame.bind("<Configure>", sync_height)
         mode_frame.bind("<Configure>", sync_height)
 
+        # Sincronizza stato toggle con checkbutton (se l'utente seleziona/deseleziona manualmente)
+        def update_toggle_all_btn(*args):
+            all_selected = all(var.get() for var in self.gruppi_vars.values())
+            self._toggle_all_selected.set(all_selected)
+            if all_selected:
+                self.toggle_all_btn.config(text="Deseleziona Tutti")
+            else:
+                self.toggle_all_btn.config(text="Seleziona Tutti")
+        for var in self.gruppi_vars.values():
+            var.trace_add("write", lambda *a: update_toggle_all_btn())
 
         self.style.configure("Dark.TSeparator", background="#111")
         sep = ttk.Separator(self, orient='horizontal', style="Dark.TSeparator")
@@ -335,6 +372,8 @@ class NomenclaturaApp(tk.Tk):
             command=self.verifica,
             style="Dark.TButton"
         )
+        
+        
 
 
         self.iupac_label.grid(row=0, column=0, sticky='e', padx=6, pady=4)
@@ -432,7 +471,7 @@ class NomenclaturaApp(tk.Tk):
             wrap='word',
             font=('Arial', 11),
             bg='#333',
-            fg='white',
+            fg='#bbb',  # Inizialmente placeholder semi-trasparente
             highlightthickness=1,
             highlightbackground="#444",
             highlightcolor="#444",
@@ -440,6 +479,38 @@ class NomenclaturaApp(tk.Tk):
         )
         self.notes_text.pack(fill='both', expand=True)
         self.notes_text.config(padx=6, pady=6)
+
+        # Placeholder logic for notes_text
+        self._notes_placeholder = "/help"
+        def show_notes_placeholder():
+            self.notes_text.delete("1.0", "end")
+            self.notes_text.insert("1.0", self._notes_placeholder)
+            self.notes_text.config(fg="#888")
+        def hide_notes_placeholder(event=None):
+            if self.notes_text.get("1.0", "end").strip() == self._notes_placeholder:
+                self.notes_text.delete("1.0", "end")
+            self.notes_text.config(fg="white")
+        def restore_notes_placeholder(event=None):
+            # Se vuoto, ripristina placeholder con fg="#888"
+            if not self.notes_text.get("1.0", "end").strip():
+                show_notes_placeholder()
+        # Set initial placeholder with fg="#888"
+        show_notes_placeholder()
+        self.notes_text.bind("<FocusIn>", hide_notes_placeholder)
+        self.notes_text.bind("<Button-1>", hide_notes_placeholder)
+        self.notes_text.bind("<FocusOut>", restore_notes_placeholder)
+
+        # --- Tracking tentativi ---
+        self.tracking_enabled = False
+        self.tracking_stats = {
+            "tot": 0,
+            "corretti": 0,
+            "errati": 0,
+            "streak": 0,
+            "max_streak": 0,
+            "storico": []
+        }
+        self.notes_text.bind("<Return>", self._notes_text_command_handler)
 
         self._show_rule(self.rule_titles[0])
 
@@ -493,7 +564,6 @@ class NomenclaturaApp(tk.Tk):
                     c.config(bg='#2b2b2b', fg='white')
                 elif cls == 'Entry':
                     try:
-
                         if hasattr(self, "formula_entry") and c == self.formula_entry:
                             if self.formula_entry.get() == getattr(self, "formula_placeholder", ""):
                                 c.config(bg='#444', fg='#888', insertbackground='white')
@@ -505,7 +575,15 @@ class NomenclaturaApp(tk.Tk):
                         pass
                 elif cls == 'Text':
                     try:
-                        c.config(bg='#333', fg='white')
+                        # Mantieni fg corrente se è il notes_text con placeholder
+                        if hasattr(self, "notes_text") and c == self.notes_text:
+                            # Se il contenuto è il placeholder, fg="#888"
+                            if self.notes_text.get("1.0", "end").strip() == getattr(self, "_notes_placeholder", ""):
+                                c.config(bg='#333', fg='#888')
+                            else:
+                                c.config(bg='#333', fg='white')
+                        else:
+                            c.config(bg='#333', fg='white')
                     except Exception:
                         pass
                 _apply(c)
@@ -539,7 +617,9 @@ class NomenclaturaApp(tk.Tk):
                     self.formule_filtrate.append(formula)
                     self.mappa_categoria[formula] = nome_cat
 
-    def nuova_formula(self):
+    
+
+    def nuova_formula(self, event=None):
         if not self.formule_filtrate:
             messagebox.showinfo('Info', 'Nessuna formula disponibile. Controlla i gruppi selezionati.')
             return
@@ -607,6 +687,10 @@ class NomenclaturaApp(tk.Tk):
                 self.result_label.config(text='Giusto ✅', fg='lime')
             else:
                 self.result_label.config(text=f'Errato — formula corretta: {correct}', fg='red')
+
+        if getattr(self, "tracking_enabled", False):
+            self._handle_count_command()
+            self.notes_text.see("end")
 
     # ------------------ Contenuti regole ------------------
     def _default_rule_contents(self):
@@ -792,3 +876,164 @@ class NomenclaturaApp(tk.Tk):
             else:
                 nome = f"{dati.get('iupac','')} / {dati.get('tradizionale','')}"
             self._set_display_text(nome)
+    # ------------------ Tracking tentativi /note ------------------
+    def _notes_text_command_handler(self, event=None):
+        content = self.notes_text.get("1.0", "end").strip()
+        # Se c'è solo il placeholder, ignoriamo
+        if content == self._notes_placeholder:
+            # Se l'utente preme /help come primo input, lo accetta
+            if "/help" in content:
+                help_text = (
+                    "Comandi disponibili:\n"
+                    "  /count  - Attiva il conteggio dei tentativi\n"
+                    "  /clear  - Azzera il tracking dei tentativi\n"
+                )
+                self.notes_text.delete("1.0", "end")
+                self.notes_text.insert("1.0", help_text)
+                self.notes_text.config(fg="white")
+                self.notes_text.see("end")
+                return "break"
+            return "break"
+
+        if "/help" in content:
+            help_text = (
+                "Comandi disponibili:\n"
+                "  /count  - Attiva il conteggio dei tentativi\n"
+                "  /clear  - Azzera il tracking dei tentativi\n"
+            )
+            self.notes_text.delete("1.0", "end")
+            self.notes_text.insert("1.0", help_text)
+            self.notes_text.config(fg="white")
+            self.notes_text.see("end")
+            return "break"
+        elif "/count" in content:
+            self.tracking_enabled = True
+            self.notes_text.insert("end", "\nConteggio attivo ✅\n")
+            self.notes_text.config(fg="white")
+            self.notes_text.see("end")
+            return "break"
+        elif "/clear" in content:
+            self._handle_clear_command()
+            self.notes_text.config(fg="white")
+            return "break"
+        return None
+
+    def _handle_count_command(self):
+        # Attiva tracking, aggiorna tentativo corrente
+        self.tracking_enabled = True
+        # Recupera stato corrente
+        formula = self.formula_corrente
+        categoria = self.categoria_corrente
+        dati = categorie_formule[categoria][formula] if formula and categoria else None
+        modalita = self.modalita_var.get()
+        scelta = self.nomenclatura_var.get()
+        result = self._check_corrente()
+        # Aggiorna stats
+        self.tracking_stats["tot"] += 1
+        if result["ok"]:
+            self.tracking_stats["corretti"] += 1
+            self.tracking_stats["streak"] += 1
+            if self.tracking_stats["streak"] > self.tracking_stats["max_streak"]:
+                self.tracking_stats["max_streak"] = self.tracking_stats["streak"]
+        else:
+            self.tracking_stats["errati"] += 1
+            self.tracking_stats["streak"] = 0
+        self.tracking_stats["storico"].append({
+            "formula": formula,
+            "categoria": categoria,
+            "modalita": modalita,
+            "scelta": scelta,
+            "ok": result["ok"],
+            "msg": result["msg"]
+        })
+        # Costruisci output pulito per il blocco note
+        # 1. Recupera tutte le entry storiche per ricostruire il blocco note
+        lines = []
+        for entry in self.tracking_stats["storico"]:
+            dati_entry = categorie_formule[entry["categoria"]][entry["formula"]]
+            if entry["modalita"] == "formula2nome":
+                formula_txt = dati_entry.get("formula", "")
+                ok = entry["ok"]
+                if ok:
+                    lines.append(f"Formula: {formula_txt} → ✅")
+                else:
+                    # Nessun suggerimento della risposta corretta
+                    lines.append(f"Formula: {formula_txt} → ❌")
+            else:
+                # nome2formula
+                scelta = entry["scelta"]
+                if scelta == "iupac":
+                    nome = dati_entry.get("iupac", "")
+                elif scelta == "tradizionale":
+                    nome = dati_entry.get("tradizionale", "")
+                else:
+                    nome = f"{dati_entry.get('iupac','')} / {dati_entry.get('tradizionale','')}"
+                ok = entry["ok"]
+                if ok:
+                    lines.append(f"Formula: {nome} → ✅")
+                else:
+                    lines.append(f"Formula: {nome} → ❌")
+        # 2. Riepilogo
+        tot = self.tracking_stats["tot"]
+        corretti = self.tracking_stats["corretti"]
+        errati = self.tracking_stats["errati"]
+        streak = self.tracking_stats["streak"]
+        max_streak = self.tracking_stats["max_streak"]
+        # Ordine: Tot, Errate, Giuste, Streak, Max
+        summary = f"Tot: {tot} | Errate: {errati} | Giuste: {corretti} | Streak: {streak} | Max: {max_streak}"
+        # 3. Aggiorna il testo delle note
+        self.notes_text.delete("1.0", "end")
+        for line in lines:
+            self.notes_text.insert("end", line + "\n\n")  # distanza leggermente aumentata
+        self.notes_text.insert("end", "\n" + summary + "\n")
+        self.notes_text.see("end")
+
+    def _handle_clear_command(self):
+        self.tracking_enabled = False
+        self.tracking_stats = {
+            "tot": 0,
+            "corretti": 0,
+            "errati": 0,
+            "streak": 0,
+            "max_streak": 0,
+            "storico": []
+        }
+        self.notes_text.delete("1.0", "end")
+        self.notes_text.insert("end", "Tracking tentativi disattivato e azzerato.\n\n")
+        self.notes_text.see("end")
+
+    def _check_corrente(self):
+        # Restituisce dict: ok (bool), msg (str)
+        if not self.formula_corrente or not self.categoria_corrente:
+            return {"ok": False, "msg": "Nessuna domanda."}
+        dati = categorie_formule[self.categoria_corrente][self.formula_corrente]
+        modalita = self.modalita_var.get()
+        scelta = self.nomenclatura_var.get()
+        def normalize(s):
+            import re
+            return re.sub(r'\s+', ' ', s.strip().lower())
+        if modalita == 'formula2nome':
+            check_iup = scelta in ('tutte', 'iupac')
+            check_trad = scelta in ('tutte', 'tradizionale')
+            iup_in = normalize(self.iupac_entry.get())
+            trad_in = normalize(self.trad_entry.get())
+            correct_iup = normalize(dati.get('iupac', ''))
+            correct_trad = normalize(dati.get('tradizionale', ''))
+            iup_ok = (iup_in == correct_iup) if check_iup else None
+            trad_ok = (trad_in == correct_trad) if check_trad else None
+            if (iup_ok or iup_ok is None) and (trad_ok or trad_ok is None):
+                return {"ok": True, "msg": "Giusto"}
+            else:
+                msgs = []
+                if check_iup and not iup_ok:
+                    msgs.append(f"Errato IUPAC ({dati.get('iupac','')})")
+                if check_trad and not trad_ok:
+                    msgs.append(f"Errato Tradizionale ({dati.get('tradizionale','')})")
+                return {"ok": False, "msg": "; ".join(msgs)}
+        else:
+            correct = self.formula_corrente.strip()
+            entered = self.formula_entry.get().strip()
+            if entered == correct:
+                return {"ok": True, "msg": "Giusto"}
+            else:
+                return {"ok": False, "msg": f"Formula corretta: {correct}"}
