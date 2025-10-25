@@ -50,7 +50,7 @@ Ossidi_Acidi = {
     "Cl2O3": {"formula": "Cl₂O₃", "iupac": "Triossido di dicloro", "tradizionale": "Anidride clorosa"},
     "Cl2O5": {"formula": "Cl₂O₅", "iupac": "Pentossido di dicloro", "tradizionale": "Anidride clorica"},
     "Br2O": {"formula": "Br₂O", "iupac": "Monossido di dibromo", "tradizionale": "Anidride ipobromosa"},
-    "BrO2": {"formula": "BrO₂", "iupac": "Diossido di bromo", "tradizionale": "Anidride bromosa"},
+    "Br2O3": {"formula": "Br₂O₃", "iupac": "Triossido di dibromo", "tradizionale": "Anidride bromosa"},
     "Br2O5": {"formula": "Br₂O₅", "iupac": "Pentossido di dibromo", "tradizionale": "Anidride bromica"},
     "BrO3": {"formula": "BrO₃", "iupac": "Triossido di bromo", "tradizionale": "Anidride perbromica"},    
     "I2O": {"formula": "I₂O", "iupac": "Monossido di diiodio", "tradizionale": "Anidride ipoiodosa"},
